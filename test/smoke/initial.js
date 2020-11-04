@@ -36,10 +36,10 @@ describe('My Little Hero', function () { //define suite title by passing a strin
             expect(label).toEqual(true);
         });
 
-        it('TC-006 Label for image', function () {
-            const label = $("//label[@title='5. Upload an image (optional)']").isDisplayed();
-            expect(label).toEqual(true);
-        });
+        // it('TC-006 Label for image', function () {
+        //     const label = $("//label[@title='5. Upload an image (optional)']").isDisplayed();
+        //     expect(label).toEqual(true);
+        // });
 
     });
 

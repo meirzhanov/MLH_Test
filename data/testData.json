@@ -1,0 +1,10 @@
+{
+  "name" : "CatNoir",
+  "gender" : {
+    "he" : 0,
+    "she" : 1,
+    "it" : 2
+  },
+  "age" : 21,
+  "storyType" : 6
+}
