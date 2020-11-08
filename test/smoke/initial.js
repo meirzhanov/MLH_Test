@@ -55,34 +55,12 @@ describe('My Little Hero', function () { //define suite title by passing a strin
              expect(text).toEqual(exp.labelGender);
          });
 
-         // it('TC-008 Label for age', function () {
-         //     const text = $$('.ant-form-item-required')[1].getAttribute('Title');
-         //     expect(text).toEqual('2. Please choose a gender.');
-         //
-         // });
-    //
-    //     it('TC-009 Label for story', function () {
-    //         const label = $$('.ant-form-item-required')[3].isDisplayed();
-    //         expect(label).toEqual(true);
-    //     });
-    //
-    //     it('TC-010 Label for image', function () {
-    //         const label = $("//label[@title='5. Upload an image (optional)']").isDisplayed();
-    //         expect(label).toEqual(true);
-    //     });
-    //
-    //     it('TC-007 Verify that name input field is displayed', function () {
-    //         const inputField = $('#name').isDisplayed();
-    //         expect(inputField).toEqual(true);
-    //     });
-    //
-    //     it('TC-008 Verify that name input field recieve value', function () {
-    //         const inputField = $('#name');
-    //         inputField.addValue('HeroName');
-    //         expect(inputField).toHaveValue('HeroName');
-    //
-    //     });
-    //
-     });
+         it('TC-008 Label for age', function () {
+             const text = $$('.ant-form-item-required')[1].getAttribute('Title');
+             expect(text).toEqual('2. Please choose a gender.');
+
+         });
+
+    });
 
 });

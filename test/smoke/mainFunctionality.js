@@ -8,7 +8,7 @@ describe('Checking the main functionality', function () {
 
         it('TC-021 Create button is clickable after 1-4 are filled with function', function () {
             browser.url('');
-            inputValues4(data.name, data.gender.he, data.age, data.storyType);
+            inputValues4(data.name, data.gender.he, data.age, data.storyType.Comedy);
             const create = $(sel.create).isEnabled();
             expect(create).toEqual(true);
         });
@@ -18,12 +18,14 @@ describe('Checking the main functionality', function () {
 
         it('TC-021 Create button is clickable after 1-4 are filled with function', function () {
             browser.url('');
-            inputValues4(data.name, data.gender.he, data.age, data.storyType);
+            inputValues4(data.name, data.gender.he, data.age, data.storyType.Comedy);
             $(sel.create).click();
             const btn = $(sel.tryAgain).isDisplayed();
             expect(btn).toEqual(true);
 
         });
     });
+
+
 
 });
