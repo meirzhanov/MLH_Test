@@ -6,7 +6,7 @@ const inputValues4 = require ('../../helpers/inputValues4.js');
 const checkUpperCase = require ('../../helpers/checkUpperCase.js');
 
 describe('Checking the main functionality', function () {
-    describe('Name', function () {
+    xdescribe('Name', function () {
         it('TC-028 Input letters inn the name field', function () {
             browser.url('');
             $(sel.name).setValue('Anna');
@@ -20,7 +20,7 @@ describe('Checking the main functionality', function () {
             expect(value).toEqual('123456789');
         });
     });
-    describe('Gender', function () {
+    xdescribe('Gender', function () {
         it('TC-030 Gender he', function () {
             browser.url('');
             const inputGender = $$(sel.gender)[0].click();
@@ -71,12 +71,15 @@ describe('Checking the main functionality', function () {
         });
         it('TC-038 After click at spinner Up the input number is increased by 1 ', function () {
             browser.url('');
-            $(sel.age).setValue('12');
+            $(sel.age).setValue(data.age);
             browser.pause(1000);
+            let newValue = data.age;
             $(sel.ageSpinnerUp).click();
             browser.pause(1000);
+            newValue = +newValue++;
             const value = $(sel.age).getValue();
-            expect(value).toEqual('13');
+            expect(value).toEqual(`${newValue}`);
+
         });
         it('TC-039 After click at spinner Down the input number is decreased by 1 ', function () {
             browser.url('');
@@ -87,7 +90,7 @@ describe('Checking the main functionality', function () {
             expect(value).toEqual('11');
         });
     });
-    describe('Story', function () {
+    xdescribe('Story', function () {
         it('TC-040 Choose a story', function () {
             const click = $(sel.storyClick).click();
             const inputStory = $$(sel.storyType)[0].click();
@@ -131,7 +134,7 @@ describe('Checking the main functionality', function () {
             expect(value).toEqual(exp.story6);
         });
     });
-    describe('Create button', function () {
+    xdescribe('Create button', function () {
         it('TC-047 Create button is disabled when you open the application', function () {
             browser.url('');
             const create = $(sel.create).isEnabled();
@@ -159,7 +162,7 @@ describe('Checking the main functionality', function () {
             expect(text).toEqual(true);
         });
     });
-    describe('Story to read', function () {
+    xdescribe('Story to read', function () {
         it('TC-051 The Hero\'s name in the name of the story is the same Name' , function () {
             browser.url('');
             const inputName = $(sel.name).setValue("Anna");

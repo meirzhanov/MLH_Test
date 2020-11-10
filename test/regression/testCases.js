@@ -8,7 +8,7 @@ describe('Checking the functionality', function () {
 
         it('TC-150 Story context corresponds to the type of story chosen', function () {
             browser.url('');
-            inputValues4(data.name, data.gender.he, data.age, data.storyType);
+            inputValues4(data.name, data.gender.he, data.age, data.storyType.Comedy);
             const create = $(sel.create).isEnabled();
             expect(create).toEqual(true);
         });

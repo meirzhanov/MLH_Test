@@ -22,10 +22,11 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        './test/smoke/initial.js',
-        './test/smoke/irina_code.js',
-        './test/smoke/mainFunctionality.js',
-        './test/regression/testCases.js'
+         './test/smoke/initial.js',
+         './test/smoke/irina_code.js',
+         './test/smoke/mainFunctionality.js',
+         './test/regression/testCases.js',
+         './test/smoke/antonTestImage.js'
 
     ],
     //
